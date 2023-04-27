@@ -21,7 +21,7 @@ const io = require('socket.io')(server, {
 
 app.use(cookieParser());
 
-const corsOpts = {
+const corsOption = {
 	origin: '*',
 	credentials: true,
 	methods: ['GET', 'POST', 'HEAD', 'PUT', 'PATCH', 'DELETE'],
