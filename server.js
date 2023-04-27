@@ -13,7 +13,7 @@ const server = require('http').createServer(app);
 const { ACTIONS } = require('./actions');
 const io = require('socket.io')(server, {
 	cors: {
-		origin: '*',
+		origin: 'https://talkspacee.netlify.app/',
 		// origin: 'https://talkspacee.netlify.app',
 		methods: ['GET', 'POST']
 	}
@@ -22,7 +22,7 @@ const io = require('socket.io')(server, {
 app.use(cookieParser());
 
 const corsOption = {
-	origin: '*',
+	origin: 'https://talkspacee.netlify.app/',
 	credentials: true,
 	methods: ['GET', 'POST', 'HEAD', 'PUT', 'PATCH', 'DELETE'],
 	allowedHeaders: ['Content-Type'],
