@@ -21,15 +21,15 @@ const io = require('socket.io')(server, {
 
 app.use(cookieParser());
 
-const corsOption = {
-	origin: 'https://talkspacee.netlify.app/',
-	credentials: true,
-	methods: ['GET', 'POST', 'HEAD', 'PUT', 'PATCH', 'DELETE'],
-	allowedHeaders: ['Content-Type'],
-	exposedHeaders: ['Content-Type']
-};
+// const corsOption = {
+// 	origin: 'https://talkspacee.netlify.app/',
+// 	credentials: true,
+// 	methods: ['GET', 'POST', 'HEAD', 'PUT', 'PATCH', 'DELETE'],
+// 	allowedHeaders: ['Content-Type'],
+// 	exposedHeaders: ['Content-Type']
+// };
 
-app.use(cors(corsOption));
+app.use(cors());
 
 app.use('/storage', express.static('storage'));
 
